@@ -1,8 +1,16 @@
 IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'DimEmployee')
     CREATE TABLE [dbo].[DimEmployee](
         [EmployeeKey] [int] IDENTITY(1,1) NOT NULL,
-        [EmployeeID] [int] NOT NULL,
-        [EmployeeName] [nvarchar](100) NULL,
-        [DepartmentName] [nvarchar](50) NULL,
+        [EmployeeID] [numeric](6, 0) NOT NULL,
+        [Initials] [varchar](3) NOT NULL,
+        [Code] [varchar](20) NOT NULL,
+        [Forename] [varchar](50) NOT NULL,
+        [Surname] [varchar](50) NOT NULL,
+        [FullName] [varchar](100) NOT NULL,
+        [Group] [varchar](20) NOT NULL,
+        [DepartmentName] [varchar](50) NOT NULL,
+        [Email] [varchar](100) NOT NULL,
+        [EffectiveDate] [datetime] NOT NULL,
+        [ExpiredDate] [datetime] NULL,
         CONSTRAINT [PK_DimEmployee] PRIMARY KEY CLUSTERED ([EmployeeKey] ASC)
     ) ON [PRIMARY]
