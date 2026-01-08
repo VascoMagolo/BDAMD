@@ -5,14 +5,14 @@ CREATE TABLE [dbo].[CustomersDQP](
 	[TaxpayerNumber] [varchar](20)  ,
 	[Fax] [varchar](60)  ,
 	[Phone] [varchar](60)  ,
-	[Contact] [varchar](30)  ,
-	[Address] [varchar](55)  ,
+	[Contact] [varchar](50)  ,
+	[Address] [varchar](100)  ,
 	[ZipCode] [varchar](10)  ,
-	[City] [varchar](33) NULL,
-	[Location] [varchar](43)  ,
+	[City] [varchar](100) NULL,
+	[Location] [varchar](50)  ,
 	[CustomerType] [int]  ,
-	[Email] [varchar](45)  ,
-	[DQP] [nvarchar](100),
+	[Email] [varchar](50)  ,
+	[DQP] [nvarchar](500),
 )
 ELSE
 	TRUNCATE TABLE CustomersDQP

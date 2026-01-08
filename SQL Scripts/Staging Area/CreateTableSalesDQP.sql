@@ -1,5 +1,5 @@
-IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Sales')
-CREATE TABLE [dbo].[Sales](
+IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'SalesDQP')
+CREATE TABLE [dbo].[SalesDQP](
 	[SaleID] [int] ,
 	[SaleDate] [datetime] ,
 	[CustomerNumber] [numeric](10, 0) ,
@@ -8,6 +8,7 @@ CREATE TABLE [dbo].[Sales](
 	[ProductsTotalValue] [numeric](19, 6) ,
 	[VAT] [numeric](19, 6) ,
 	[FinalValue] [numeric](19, 6) ,
+	[DQP] [nvarchar] (500)
 )
 ELSE
-	TRUNCATE TABLE Sales
+	TRUNCATE TABLE SalesDQP

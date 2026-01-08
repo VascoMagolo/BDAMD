@@ -1,7 +1,7 @@
 IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'DimEmployee')
 BEGIN
     CREATE TABLE [dbo].[DimEmployee](
-        [EmployeeKey] [int] IDENTITY(1,1) NOT NULL,
+        [EmployeeKey] [numeric] IDENTITY(1,1) NOT NULL,
         [EmployeeID] [numeric](6, 0) NOT NULL,
         [Initials] [varchar](3) NOT NULL,
         [Code] [varchar](20) NOT NULL,

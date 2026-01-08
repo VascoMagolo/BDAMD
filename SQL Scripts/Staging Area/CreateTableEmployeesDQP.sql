@@ -5,10 +5,10 @@ CREATE TABLE [dbo].[EmployeesDQP](
 	[Code] [varchar](20) ,
 	[Forename] [varchar](50),
 	[Surname] [varchar](50) ,
-	[Group] [varchar](20) ,
+	[Group] [varchar](50) ,
 	[Department] [int] ,
 	[Email] [varchar](100),
-	[DQP] [nvarchar](150),
+	[DQP] [nvarchar](500),
 )
 ELSE 
 	TRUNCATE TABLE EmployeesDQP

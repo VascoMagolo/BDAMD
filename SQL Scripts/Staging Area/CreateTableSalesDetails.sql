@@ -7,6 +7,7 @@ CREATE TABLE [dbo].[SalesDetails](
 	[VATRate] [numeric](4, 2) ,
 	[UnitPrice] [numeric](19, 6) ,
 	[LineValue] [numeric](19, 6) ,
+
 )
 ELSE
 	TRUNCATE TABLE SalesDetails

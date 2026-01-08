@@ -1,7 +1,7 @@
 IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'ProductsDQP')
 CREATE TABLE [dbo].[ProductsDQP](
 	[Code] [char](18),
-	[Description] [char](60),
+	[Description] [char](100),
 	[FamilyCode] [int],
 	[Stock] [numeric](13, 3),
 	[UnitPrice] [numeric](19, 6),
@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[ProductsDQP](
 	[MinimunStock] [numeric](13, 3),
 	[StartSellingDate] [date],
 	[Category] [varchar](25),
-	[DQP] [nvarchar] (150),
+	[DQP] [nvarchar] (500),
 )
 ELSE
 	TRUNCATE TABLE ProductsDQP
